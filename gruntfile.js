@@ -7,11 +7,10 @@ module.exports = function (grunt) {
         includeSource: {
             options: {
                 basePath: 'public/',
-                baseUrl: 'public/',
             },
             dev: {
                 files: {
-                    'index.html': 'index.html'
+                    'public/index.html': 'public/index.html'
                 }
             }
 

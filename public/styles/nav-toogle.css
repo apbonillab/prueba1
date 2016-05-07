@@ -1,23 +1,24 @@
-#nav-toggle { position: absolute; left: 50%; top: 50%; }
-
-#nav-toggle { cursor: pointer; padding: 10px 35px 16px 0px; }
+/*#nav-toggle { position: absolute; left: 5px; top: 5px; }*/
+#nav-toggle { 
+    cursor: pointer; 
+    padding: 10px 35px 16px 0px; 
+}
 #nav-toggle span, #nav-toggle span:before, #nav-toggle span:after {
   cursor: pointer;
-  border-radius: 1px;
-  height: 5px;
-  width: 35px;
-  background: white;
+  border-radius: 20px;
+  height: 20px;
+  width: 100px;
+  background: #eee;
   position: absolute;
   display: block;
   content: '';
 }
 #nav-toggle span:before {
-  top: -10px; 
+  top: -25px; 
 }
 #nav-toggle span:after {
-  bottom: -10px;
+  bottom: -25px;
 }
-
 #nav-toggle span, #nav-toggle span:before, #nav-toggle span:after {
   transition: all 500ms ease-in-out;
 }
@@ -25,11 +26,72 @@
   background-color: transparent;
 }
 #nav-toggle.active span:before, #nav-toggle.active span:after {
-  top: 0;
+  top: 0px;
 }
 #nav-toggle.active span:before {
   transform: rotate(45deg);
 }
 #nav-toggle.active span:after {
   transform: rotate(-45deg);
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: #eee;
+}
+
+li a {
+    display: block;
+    color: #000;
+    padding: 8px 0 8px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color on hover */
+li a:hover {
+    background-color: #555;
+    color: #eee;
+}
+
+#animated-in {
+    position: relative;
+    -webkit-animation-name: animation-in; /* Chrome, Safari, Opera */
+    -webkit-animation-duration: 1s; /* Chrome, Safari, Opera */
+    animation-name: animation-in;
+    animation-duration: 1s;
+}
+
+#animated-out {
+    position: relative;
+    -webkit-animation-name: animation-out; /* Chrome, Safari, Opera */
+    -webkit-animation-duration: 1s; /* Chrome, Safari, Opera */
+    animation-name: animation-out;
+    animation-duration: 1s;
+    left:-150%;
+}
+ 
+/* Chrome, Safari, Opera */
+@-webkit-keyframes animation-in {
+    0%      {left:-100%}
+    100%    {left:0%}
+}
+
+/* Standard syntax */
+@keyframes animation-in {
+    0%      {left:-100%}
+    100%    {left:0%}
+}
+
+@-webkit-keyframes animation-out {
+    0%      {left:0%}
+    100%    {left:-150%}
+}
+
+/* Standard syntax */
+@keyframes animation-out {
+    0%      {left:0%}
+    100%    {left:-150%}
 }
