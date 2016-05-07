@@ -1,0 +1,23 @@
+.box-shadow-menu {
+  position: relative;
+  padding-left: 2px;
+}
+.box-shadow-menu:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 2px;
+  width: 120px;
+  height: 15px;
+  background: #eee;
+  box-shadow: 
+    0 30px 0 0 #eee,
+    0 60px 0 0 #eee;
+}
+/*.box-shadow-menu{ display: none; }*/
+/*TODO http://codepen.io/elijahmanor/pen/Igpoe*/
+/*TODO http://www.w3schools.com/css/tryit.asp?filename=trycss3_animation3*/
+
+
+
+  

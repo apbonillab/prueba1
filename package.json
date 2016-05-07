@@ -19,5 +19,8 @@
   "dependencies": {
     "express": "~4.2.0",
     "morgan": "~1.0.0"
+  },
+  "devDependencies": {
+    "grunt-include-source": "^0.7.1"
   }
 }

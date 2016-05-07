@@ -3,17 +3,17 @@
  * 
  * Request to service items
  */
-var itemsRequest = {
+var ItemsRequest = {
     url: '/api/nav.json',
+    result: null,
     request: function () {
         var xmlhttp = new XMLHttpRequest();
         xmlhttp.onreadystatechange = function () {
             if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-                var myArr = JSON.parse(xmlhttp.responseText);
-                myFunction(myArr);
+                ItemsRequest.result = ItemsRequest.succes(xmlhttp.responseText);
             }
         };
-        xmlhttp.open("GET", itemsRequest.url, true);
+        xmlhttp.open("GET", ItemsRequest.url, true);
         xmlhttp.send();
     },
     succes: function (json) {
@@ -21,6 +21,5 @@ var itemsRequest = {
             JSON.parse(json) : json;
         return parseJson;
     }
-
 }
 
