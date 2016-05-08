@@ -1,3 +1,7 @@
+#nav-toggle{
+    display: none;
+}
+@media screen and (max-width:768px) {
 div.translucent-in{
     z-index: 1;
     top: 0px;
@@ -79,7 +83,7 @@ ul {
 
 .nav-logo{
     position: absolute;
-    width: 200px;
+    width: 80px;
     right: 0px;
     padding-top: 25px;
     padding-right: 15px;
@@ -142,35 +146,36 @@ ul.child-hide{
 }
 
 .top-nav{
-    top: 120px;
+    top: 80px;
     position: absolute;
     /*Overloaded nav content*/
     overflow-y: auto;
-    max-height: 85vh;
+    max-height: 80vh;
 }
 
 
 #nav-toggle { 
+    display: block;
     cursor: pointer; 
     padding: 10px 35px 16px 0px; 
     position: absolute; 
-    top: 40px;
+    top: 20px;
 }
 #nav-toggle span, #nav-toggle span:before, #nav-toggle span:after {
   cursor: pointer;
   border-radius: 20px;
-  height: 20px;
-  width: 100px;
+  height: 10px;
+  width: 50px;
   background: #eee;
   position: absolute;
   display: block;
   content: '';
 }
 #nav-toggle span:before {
-  top: -25px; 
+  top: -15px; 
 }
 #nav-toggle span:after {
-  bottom: -25px;
+  bottom: -15px;
 }
 #nav-toggle span, #nav-toggle span:before, #nav-toggle span:after {
   transition: all 250ms ease-in-out;
@@ -230,3 +235,4 @@ ul.child-hide{
     100%    {background:rgba(0, 0, 0, 0.5)}
 }
 
+}
