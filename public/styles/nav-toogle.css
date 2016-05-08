@@ -41,6 +41,23 @@ ul {
     padding: 0;
     width: 100%;
     background-color: gba(0, 0, 0, 0.5);
+    font-family: 'HUGEAvantGardeBold';
+    font-size: 48px;
+    
+}
+
+li>ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: gba(0, 0, 0, 0.5);
+    font-family: 'Galaxie';
+    font-size: 48px;
+}
+
+li{
+    text-align: center;
 }
 
 li a {
@@ -52,12 +69,12 @@ li a {
 
 /* Change the link color on hover */
 li a:hover {
-    background-color: #555;
-    color: #eee;
+    background-color: #eee;
+    color: #ec008c;
 }
 
 .animated-in {
-    top:100px;
+    /*top:100px;*/
     position: relative;
     -webkit-animation-name: animation-in; /* Chrome, Safari, Opera */
     -webkit-animation-duration: 1s; /* Chrome, Safari, Opera */
@@ -82,7 +99,7 @@ li a:hover {
 }
 
 .animated-out {
-    top:100px;
+    /*top:100px;*/
     position: relative;
     -webkit-animation-name: animation-out; /* Chrome, Safari, Opera */
     -webkit-animation-duration: 1s; /* Chrome, Safari, Opera */
@@ -95,25 +112,30 @@ li a:hover {
 @-webkit-keyframes animation-out {
     0%      {left:0%;
             opacity: 1.0;}
-    100%    {left:-150%;
-            opacity: 0.0;}
+    80%     {opacity: 0.0;}
+    100%    {left:-150%;}
 }
 
 /* Standard syntax */
 @keyframes animation-out {
-    0%      {left:0%}
+    0%      {left:0%;
+            opacity: 1.0;}
+    80%     {opacity: 0.0;}
     100%    {left:-150%}
 }
 
 .animated-start    {
-    top:100px;
+    /*top:100px;*/
     position: relative;
     left:-150%;
 }
 
 .nav-logo{
+    position: absolute;
     width: 200px;
     right: 0px;
+    padding-top: 25px;
+    padding-right: 15px;
 }
 
 div.translucent-in{
@@ -140,6 +162,14 @@ div.translucent-in{
 @keyframes translucent-in {
     0%    {background:rgba(0, 0, 0, 0.0)}
     100%    {background:rgba(0, 0, 0, 0.5)}
+}
+
+.top-nav{
+    top: 120px;
+    position: absolute;
+    /*Overloaded nav content*/
+    overflow-y: auto;
+    max-height: 85vh;
 }
  
 

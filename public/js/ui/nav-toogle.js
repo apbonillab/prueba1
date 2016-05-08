@@ -1,9 +1,10 @@
+/**hamburger click event */
 document.querySelector("#nav-toggle")
     .addEventListener("click", function () {
         this.classList.toggle("active");
         animate();
     });
-
+/**Animation translation logic*/
 function animate() {
     function animateIn() {
         document.getElementById("navbar").className = "animated-in";
@@ -13,11 +14,9 @@ function animate() {
         document.getElementById("navbar").className = "animated-out";
         document.getElementById("container").className = "";
     }
-    if (document.getElementById("navbar").className === "animated-in") {
+    if (document.getElementById("navbar").className === "animated-in")
         animateOut();
-    }
-    else {
+    else
         animateIn();
-    }
 }
 
