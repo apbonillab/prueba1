@@ -40,12 +40,12 @@ ul {
     margin: 0;
     padding: 0;
     width: 100%;
-    background-color: #eee;
+    background-color: gba(0, 0, 0, 0.5);
 }
 
 li a {
     display: block;
-    color: #000;
+    color: #eee;
     padding: 8px 0 8px 16px;
     text-decoration: none;
 }
@@ -66,13 +66,19 @@ li a:hover {
 }
 
 @-webkit-keyframes animation-in {
-    0%      {left:-100%}
-    100%    {left:0%}
+    0%      {left:-100%;
+            opacity: 0.0;}
+    80%    {left:0%;
+            opacity: 0.7;}
+    100%    {opacity: 1.0;}
 }
 
 @keyframes animation-in {
-    0%      {left:-100%}
-    100%    {left:0%}
+    0%      {left:-100%;
+            opacity: 0.0;}
+    80%    {left:0%;
+            opacity: 0.7;}
+    100%    {opacity: 1.0;}
 }
 
 .animated-out {
@@ -85,9 +91,12 @@ li a:hover {
     left:-150%;
 }
 
+
 @-webkit-keyframes animation-out {
-    0%      {left:0%}
-    100%    {left:-150%}
+    0%      {left:0%;
+            opacity: 1.0;}
+    100%    {left:-150%;
+            opacity: 0.0;}
 }
 
 /* Standard syntax */
@@ -100,6 +109,37 @@ li a:hover {
     top:100px;
     position: relative;
     left:-150%;
+}
+
+.nav-logo{
+    width: 200px;
+    right: 0px;
+}
+
+div.translucent-in{
+    z-index: 1;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.5);
+    -webkit-animation-name: translucent-in; /* Chrome, Safari, Opera */
+    -webkit-animation-duration: 1s; /* Chrome, Safari, Opera */
+    animation-name: translucent-in;
+    animation-duration: 1s;
+    position: absolute;
+}
+
+@-webkit-keyframes translucent-in {
+    0%    {background:rgba(0, 0, 0, 0.0)}
+    100%    {background:rgba(0, 0, 0, 0.5)}
+}
+
+/* Standard syntax */
+@keyframes translucent-in {
+    0%    {background:rgba(0, 0, 0, 0.0)}
+    100%    {background:rgba(0, 0, 0, 0.5)}
 }
  
 
