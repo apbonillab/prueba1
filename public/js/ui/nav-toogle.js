@@ -13,6 +13,7 @@ function animate() {
     function animateOut() {
         document.getElementById("navbar").className = "animated-out";
         document.getElementById("container").className = "";
+        itemParent.hideAll();
     }
     if (document.getElementById("navbar").className === "animated-in")
         animateOut();

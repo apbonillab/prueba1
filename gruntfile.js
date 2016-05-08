@@ -1,7 +1,6 @@
 module.exports = function (grunt) {
 
     grunt.loadNpmTasks('grunt-include-source');
-
     grunt.initConfig({
 
         includeSource: {

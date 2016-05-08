@@ -17,8 +17,8 @@
       </div>
       <ul class="top-nav">
         <li>
-          <a href="#home">Home</a>
-          <ul>
+          <a href="#home" class="parent-start">Home</a>
+          <ul class="child-start">
             <li>
               <a href="#home">SubItem</a>
             </li>
@@ -37,8 +37,8 @@
           <a href="#about">About</a>
         </li>
         <li>
-          <a href="#home">Home</a>
-          <ul>
+          <a href="#home" class="parent-start">Parent</a>
+          <ul class="child-start">
             <li>
               <a href="#home">SubItem</a>
             </li>
@@ -57,8 +57,8 @@
           <a href="#about">About</a>
         </li>
         <li>
-          <a href="#home">Home</a>
-          <ul>
+          <a href="#home" class="parent-start">Home</a>
+          <ul class="child-start">
             <li>
               <a href="#home">SubItem</a>
             </li>
@@ -71,9 +71,11 @@
     </div>
   </div>
   <h1>Hello.</h1>
+  <script src="http://livejs.com/live.js"></script>
   <!-- include: "type": "js", "files": ["js/**/*.js"]-->
   <script src="js/Item.js"></script>
   <script src="js/request/ItemsRequest.js"></script>
+  <script src="js/ui/item-parent.js"></script>
   <script src="js/ui/nav-toogle.js"></script>
   <!-- /include -->
 </body>

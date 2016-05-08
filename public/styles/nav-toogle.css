@@ -1,7 +1,160 @@
-#nav-toggle { position: absolute; top: 40px; }
+div.translucent-in{
+    z-index: 1;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.5);
+    -webkit-animation-name: translucent-in; /* Chrome, Safari, Opera */
+    -webkit-animation-duration: 1s; /* Chrome, Safari, Opera */
+    animation-name: translucent-in;
+    animation-duration: 1s;
+    position: absolute;
+}
+
+li>ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: gba(0, 0, 0, 0.5);
+    font-family: 'Galaxie';
+    font-size: 48px;
+}
+
+li{
+    text-align: center;
+}
+
+li a {
+    display: block;
+    color: #eee;
+    padding: 8px 0 8px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color on hover */
+li a:hover {
+    background-color: #eee;
+    color: #ec008c;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: gba(0, 0, 0, 0.5);
+    font-family: 'HUGEAvantGardeBold';
+    font-size: 48px;
+}
+
+
+
+.animated-in {
+    /*top:100px;*/
+    position: relative;
+    -webkit-animation-name: animation-in; /* Chrome, Safari, Opera */
+    -webkit-animation-duration: 1s; /* Chrome, Safari, Opera */
+    animation-name: animation-in;
+    animation-duration: 1s;
+}
+
+.animated-out {
+    /*top:100px;*/
+    position: relative;
+    -webkit-animation-name: animation-out; /* Chrome, Safari, Opera */
+    -webkit-animation-duration: 1s; /* Chrome, Safari, Opera */
+    animation-name: animation-out;
+    animation-duration: 1s;
+    left:-150%;
+}
+
+.animated-start    {
+    /*top:100px;*/
+    position: relative;
+    left:-150%;
+}
+
+.nav-logo{
+    position: absolute;
+    width: 200px;
+    right: 0px;
+    padding-top: 25px;
+    padding-right: 15px;
+}
+
+.parent-start{
+    -webkit-transform: rotate(0deg);
+    transform:rotateY(0deg);
+}
+
+.parent-in{
+    -webkit-transform: rotate(180deg);
+    transform:rotateX(180deg);
+    -webkit-animation-name: parent-in-animation; /* Chrome, Safari, Opera */
+    -webkit-animation-duration: 0.5s; /* Chrome, Safari, Opera */
+    animation-name: parent-in-animation;
+    animation-duration: 0.5s;
+}
+
+@keyframes parent-in-animation {
+    0%    {transform:rotateX(0deg);}
+    100%    {transform:rotateX(180deg);}
+}
+
+@-webkit-keyframes parent-in-animation {
+    0%    {transform:rotateX(0deg);}
+    100%    {transform:rotateX(180deg);}
+}
+
+.parent-out{
+    /*top:100px;*/
+    -webkit-transform: rotate(0deg);
+    transform:rotateX(0deg);
+    -webkit-animation-name: parent-out-animation; /* Chrome, Safari, Opera */
+    -webkit-animation-duration: 0.5s; /* Chrome, Safari, Opera */
+    animation-name: parent-out-animation;
+    animation-duration: 0.5s;
+}
+
+@keyframes parent-out-animation {
+    0%    {transform:rotateX(180deg);}
+    100%    {transform:rotateX(0deg);}
+}
+
+@-webkit-keyframes parent-out-animation {
+    0%    {transform:rotateX(180deg);}
+    100%    {transform:rotateX(0deg);}
+}
+
+ul.child-start{
+    display: none;
+}
+
+ul.child-show{
+    display: block;
+}
+
+ul.child-hide{
+    display: none;
+}
+
+.top-nav{
+    top: 120px;
+    position: absolute;
+    /*Overloaded nav content*/
+    overflow-y: auto;
+    max-height: 85vh;
+}
+
+
 #nav-toggle { 
     cursor: pointer; 
     padding: 10px 35px 16px 0px; 
+    position: absolute; 
+    top: 40px;
 }
 #nav-toggle span, #nav-toggle span:before, #nav-toggle span:after {
   cursor: pointer;
@@ -35,53 +188,6 @@
   transform: rotate(-45deg);
 }
 
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    background-color: gba(0, 0, 0, 0.5);
-    font-family: 'HUGEAvantGardeBold';
-    font-size: 48px;
-    
-}
-
-li>ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    background-color: gba(0, 0, 0, 0.5);
-    font-family: 'Galaxie';
-    font-size: 48px;
-}
-
-li{
-    text-align: center;
-}
-
-li a {
-    display: block;
-    color: #eee;
-    padding: 8px 0 8px 16px;
-    text-decoration: none;
-}
-
-/* Change the link color on hover */
-li a:hover {
-    background-color: #eee;
-    color: #ec008c;
-}
-
-.animated-in {
-    /*top:100px;*/
-    position: relative;
-    -webkit-animation-name: animation-in; /* Chrome, Safari, Opera */
-    -webkit-animation-duration: 1s; /* Chrome, Safari, Opera */
-    animation-name: animation-in;
-    animation-duration: 1s;
-}
-
 @-webkit-keyframes animation-in {
     0%      {left:-100%;
             opacity: 0.0;}
@@ -98,17 +204,6 @@ li a:hover {
     100%    {opacity: 1.0;}
 }
 
-.animated-out {
-    /*top:100px;*/
-    position: relative;
-    -webkit-animation-name: animation-out; /* Chrome, Safari, Opera */
-    -webkit-animation-duration: 1s; /* Chrome, Safari, Opera */
-    animation-name: animation-out;
-    animation-duration: 1s;
-    left:-150%;
-}
-
-
 @-webkit-keyframes animation-out {
     0%      {left:0%;
             opacity: 1.0;}
@@ -124,35 +219,6 @@ li a:hover {
     100%    {left:-150%}
 }
 
-.animated-start    {
-    /*top:100px;*/
-    position: relative;
-    left:-150%;
-}
-
-.nav-logo{
-    position: absolute;
-    width: 200px;
-    right: 0px;
-    padding-top: 25px;
-    padding-right: 15px;
-}
-
-div.translucent-in{
-    z-index: 1;
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    background: rgba(0, 0, 0, 0.5);
-    -webkit-animation-name: translucent-in; /* Chrome, Safari, Opera */
-    -webkit-animation-duration: 1s; /* Chrome, Safari, Opera */
-    animation-name: translucent-in;
-    animation-duration: 1s;
-    position: absolute;
-}
-
 @-webkit-keyframes translucent-in {
     0%    {background:rgba(0, 0, 0, 0.0)}
     100%    {background:rgba(0, 0, 0, 0.5)}
@@ -163,14 +229,4 @@ div.translucent-in{
     0%    {background:rgba(0, 0, 0, 0.0)}
     100%    {background:rgba(0, 0, 0, 0.5)}
 }
-
-.top-nav{
-    top: 120px;
-    position: absolute;
-    /*Overloaded nav content*/
-    overflow-y: auto;
-    max-height: 85vh;
-}
- 
-
 
