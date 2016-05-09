@@ -1,9 +1,9 @@
-/**hamburger click event */
-document.querySelector("#nav-toggle")
+document.querySelector("#nav-icon")
     .addEventListener("click", function () {
-        this.classList.toggle("active");
+        this.classList.toggle("open");
         animate();
     });
+    
 /**Animation translation logic*/
 function animate() {
     function animateIn() {
@@ -20,4 +20,3 @@ function animate() {
     else
         animateIn();
 }
-
