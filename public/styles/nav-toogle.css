@@ -1,7 +1,58 @@
-#nav-toggle{
+#nav-toggle,.nav-logo{
     display: none;
 }
-@media screen and (max-width:768px) {
+@media screen and (min-width:768px) {
+body{
+    margin: 0px;
+}
+ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color:  #eee;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: 'HUGEAvantGardeBold';
+    font-size: 21px;
+}
+
+li a:hover {
+    background-color: #eee;
+    color:  #ec008c;
+}
+.child-start{
+    position: absolute;
+    display: none;
+}
+.child-show{
+    /*display:block;
+    float: left; 
+    margin-left: -100%; 
+    z-index:2; 
+    position: relative;*/ 
+    position:fixed;
+    /*top:0px;*/
+    /*left:0px;*/
+    /*width:100%;*/
+}
+.child-hide{
+    position: absolute;
+    display: none;
+}
+
+}
+@media screen and (max-width:767px) {
 div.translucent-in{
     z-index: 1;
     top: 0px;
@@ -22,7 +73,7 @@ li>ul {
     margin: 0;
     padding: 0;
     width: 100%;
-    background-color: gba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.5);
     font-family: 'Galaxie';
     font-size: 48px;
 }
