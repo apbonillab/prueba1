@@ -1,5 +1,6 @@
 var itemParent = {
     init: function () {
+        var y = document.querySelector('.list')
         var className = document.getElementsByClassName("parent-start");
         for (var i = 0; i < className.length; i++) {
             className[i].addEventListener('click', function (e) {
@@ -18,8 +19,9 @@ var itemParent = {
         }
         if (element.className === "parent-in")
             animateOut();
-        else
+        else {
             animateIn();
+        }
     },
     hideAll() {
         //TODO solve this bug

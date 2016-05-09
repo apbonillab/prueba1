@@ -1,8 +1,12 @@
 @import "fonts.css";
 @import "nav-toogle.css";
 body {
-  background: #ec008c;
-  color: #fff;
+  /*background: #ec008c;
+  color: #fff;*/
+      color: rgb(0, 0, 0);
+    background: rgb(255, 255, 255);
+    padding: 0px;
+    margin: 0px;
 }
 
 h1 {
@@ -16,3 +20,4 @@ h1 {
   letter-spacing: -0.06em;
   text-align: center;
 }
+

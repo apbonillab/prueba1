@@ -21,7 +21,6 @@ Item.prototype.toHTML = function () {
     }
     else {
         itemHTML.setAttribute('href', this.url);
-        itemHTML.setAttribute('target', '_blank');
         var label = document.createTextNode(this.label);
         itemHTML.appendChild(label);
     }
