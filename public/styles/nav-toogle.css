@@ -2,11 +2,37 @@
     display: none;
 }
 @media screen and (min-width:768px) {
+.banner-img{
+    width: 100%;
+    min-height: 640px;
+    background: url("/images/background-image.jpg") 50% 50% / cover;
+}
+    
+ section.text-content>p{
+    font-family: Galaxie, Helvetica, Arial, sans-serif;
+    font-size: 24px;
+    line-height: 36px;
+ }
+ 
+ section.text-content{
+    margin-left: 19px;
+    margin-right: 19px;
+    
+ }
+    
 .logo{
     width:60px;
-    margin-top: 15px;
-    margin-left: 15px;
+    margin-top: 24px;
+    margin-left: 24px;
+    margin-right: 15px;
 }
+.headline-text{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    color: #fff;
+}
+
 
 body{
     margin: 0px;
@@ -26,9 +52,8 @@ li {
 
 li a {
     display: block;
-    color:  #eee;
-    text-align: center;
-    padding: 14px 16px;
+    color:  #fff;
+    padding: 24px 20px;
     text-decoration: none;
     font-family: 'HUGEAvantGardeBold';
     font-size: 21px;
@@ -40,19 +65,25 @@ li a:hover {
 }
 
 ul>a{
-    background-color: #eee;
-    color:  #ec008c;
+    background-color: #fff;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    white-space: nowrap;
+    padding: 16px 24px;
+    font-family: Galaxie, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    z-index: 3;
 }
 ul>a:hover{
-    background-color:#ec008c ;
-    color:  #eee;
+    background-color:#eee ;
+    color:  #ec008c;
 }
 .child-start{
     position: absolute;
     display: none;
 }
 .child-show{
-    position:fixed;
+        position: absolute;
 }
 .child-hide{
     position: absolute;

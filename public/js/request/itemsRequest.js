@@ -45,10 +45,7 @@ var ItemsRequest = {
         ItemsRequest.drawItems();
     },
     drawItems: function () {
-        //var navBar = document.getElementById("navbar");
-        //var ul = document.createElement("UL");
         var ul = document.querySelector(".top-nav");
-        //ul.className = 'top-nav';
         ItemsRequest.items.forEach(function (item) {
             var li = document.createElement("LI");
             li.appendChild(item.toHTML());
@@ -59,8 +56,6 @@ var ItemsRequest = {
 
             ul.appendChild(li);
         }, this);
-        /*container += '</ul>';*/
-        //navBar.appendChild(ul);
     }
 }
 

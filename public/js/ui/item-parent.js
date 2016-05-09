@@ -10,6 +10,7 @@ var itemParent = {
     },
     animate: function animate(element) {
         function animateIn() {
+            itemParent.hideAll();
             element.className = "parent-in";
             element.nextElementSibling.className = "child-show";
         }
