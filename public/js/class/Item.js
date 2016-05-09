@@ -6,11 +6,6 @@ function Item(label, url, items) {
 
 Item.prototype.toHTML = function () {
 
-    /*var itemHTML =
-        '<a href="' + this.url + '" target="_blank">' +
-        this.label +
-        '</a>';*/
-
     var itemHTML = document.createElement("A");
 
     if (this.items.length > 0) {
@@ -33,10 +28,8 @@ Item.prototype.childsHTML = function () {
 
     var childsHTML = document.createElement("UL");
     childsHTML.className = "child-start"
-    //childsHTML = '<ul class="child-start">';
 
     this.items.forEach(function (item) {
-        //childsHTML += item.toHTML()
         childsHTML.appendChild(item.toHTML())
     }, this);
 

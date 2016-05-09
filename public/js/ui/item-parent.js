@@ -1,11 +1,18 @@
 var itemParent = {
     init: function () {
-        var y = document.querySelector('.list')
         var className = document.getElementsByClassName("parent-start");
         for (var i = 0; i < className.length; i++) {
             className[i].addEventListener('click', function (e) {
                 itemParent.animate(this);
             });
+        }
+        var navItems = document.querySelectorAll("ul a");
+        for (var i = 0; i < navItems.length; i++) {
+            if (navItems[i].className !== 'parent-start') {
+                navItems[i].addEventListener('click', function (e) {
+                    itemParent.hideAll();
+                });
+            }
         }
     },
     animate: function animate(element) {
