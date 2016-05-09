@@ -43,7 +43,7 @@ ul>a{
     background-color: #eee;
     color:  #ec008c;
 }
-ul a:hover{
+ul>a:hover{
     background-color:#ec008c ;
     color:  #eee;
 }
