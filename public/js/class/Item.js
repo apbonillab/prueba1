@@ -9,7 +9,7 @@ Item.prototype.toHTML = function () {
     var itemHTML = document.createElement("A");
 
     if (this.items.length > 0) {
-        itemHTML.setAttribute('href', '#');
+        itemHTML.setAttribute('href', '/#/');
         itemHTML.className = "parent-start";
         var label = document.createTextNode(this.label);
         itemHTML.appendChild(label);

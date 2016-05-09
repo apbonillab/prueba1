@@ -1,7 +1,3 @@
-#nav-toggle,.nav-logo{
-    display: none;
-}
-
 .chevron::before {
 	border-style: solid;
 	border-width: 0.25em 0.25em 0 0;
@@ -32,6 +28,18 @@
 }
 
 @media screen and (min-width:768px) {
+    .headline-text>h1{
+        position: relative;
+        font-family: HUGEAvantGardeBold;
+        font-size: 120px;
+        color: rgb(255, 255, 255);
+        line-height: 132px;
+        text-align: center;
+        padding: 0px 24px;
+    }
+    #nav-toggle,.nav-logo-out,.nav-logo-in{
+        display: none;
+    }
     .banner-img{
         width: 100%;
         min-height: 640px;
@@ -59,7 +67,7 @@
     .headline-text{
         width: 100%;
         position: absolute;
-        top: 50%;
+        top: 20%;
         color: #fff;
     }
 
@@ -126,7 +134,38 @@
 }
 
 @media screen and (max-width:767px) {
+.banner-img{
+    position: relative;
+}
+.headline-text>h1{
+        position: relative;
+        color: #000;
+        font-family: HUGE, Helvetica, Arial, sans-serif;
+        font-size: 44px;
+        line-height: 48px;
+        margin: 41px 24px;
+    }
     
+    
+section.text-content>p {
+    font-family: Galaxie, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+section.text-content{
+    margin-left: 19px;
+    margin-right: 19px;
+}
+
+#navbar{
+    position: absolute;
+    width: 280px;
+    height: auto;
+    background: #fff;
+    z-index: 3;
+}
+
 #nav-icon {
   width: 60px;
   height: 45px;
@@ -233,7 +272,7 @@
 }
 .banner-img{
     width: 100%;
-    min-height: 640px;
+    min-height: 240px;
     background: url("/images/background-image.jpg") 50% 50% / cover;
 }
 div.translucent-in{
@@ -271,7 +310,7 @@ li>a.parent-start::before,li>a.parent-out::before {
     transition: 0.25s;
     position: relative;
     top: 28px;
-    left: 35vh;
+    left: 225px;
 }
 
 li>a.parent-in::before {
@@ -285,7 +324,7 @@ li>a.parent-in::before {
     transition: 0.25s;
     position: relative;
     top: 28px;
-    left: 35vh;
+    left: 225px;
 }
 
 li a {
@@ -305,13 +344,10 @@ ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    width: 60%;
     font-family: 'HUGEAvantGardeBold';
     font-size: 21px;
     line-height: 48px;
 }
-
-
 
 .animated-in {
     /*top:100px;*/
@@ -338,34 +374,24 @@ ul {
     left:-150%;
 }
 
-.nav-logo{
-    position: absolute;
+.nav-logo-in{
+    position: relative;
     width: 80px;
-    right: 0px;
     padding-top: 25px;
-    padding-right: 15px;
+    padding-left: 15px;
+    -webkit-animation-name: animation-in; /* Chrome, Safari, Opera */
+    -webkit-animation-duration: 1s; /* Chrome, Safari, Opera */
+    animation-name: animation-in;
+    animation-duration: 1s;
+}
+
+.nav-logo-out{
+    display: none;
 }
 
 .parent-start{
     -webkit-transform: rotate(0deg);
     transform:rotateY(0deg);
-}
-
-.parent-in{
-}
-
-
-.parent-out{
-}
-
-@keyframes parent-out-animation {
-    0%    {transform:rotateX(180deg);}
-    100%    {transform:rotateX(0deg);}
-}
-
-@-webkit-keyframes parent-out-animation {
-    0%    {transform:rotateX(180deg);}
-    100%    {transform:rotateX(0deg);}
 }
 
 ul.child-start{
@@ -382,7 +408,7 @@ ul.child-hide{
 
 .top-nav{
     z-index: 3;
-    position: absolute;
+    position: relative;
     /*Overloaded nav content*/
     width: 280px;
     height: auto;
@@ -393,53 +419,6 @@ ul.child-hide{
     background: #ec008c;
     width: 100%;
     height: 80px;
-}
-
-
-#nav-toggle { 
-    z-index: 2;
-    display: block;
-    cursor: pointer; 
-    padding: 10px 35px 16px 0px; 
-    position: absolute; 
-    top: 20px;
-    left: 20px;
-}
-#nav-toggle span, #nav-toggle span:before, #nav-toggle span:after {
-  cursor: pointer;
-  border-radius: 20px;
-  height: 10px;
-  width: 50px;
-  background: #eee;
-  position: absolute;
-  display: block;
-  content: '';
-  
-}
-#nav-toggle span:before {
-  top: -15px; 
-}
-#nav-toggle span:after {
-  bottom: -15px;
-}
-#nav-toggle span, #nav-toggle span:before, #nav-toggle span:after {
-  transition: all 250ms ease-in-out;
-}
-#nav-toggle.active span {
-  background-color: transparent;
-}
-#nav-toggle.active span:before, #nav-toggle.active span:after {
-  top: 0px;
-}
-#nav-toggle.active span:before {
-  transform: rotate(45deg);
-}
-#nav-toggle.active span:after {
-  transform: rotate(-45deg);
-}
-
-#nav-toggle.active{
-    right: 20px;
 }
 
 @-webkit-keyframes animation-in {
