@@ -11,6 +11,7 @@ ul {
     padding: 0px;
     overflow: hidden;
     background-color: rgba(0, 0, 0, 0.5);
+    z-index: 3;
 }
 
 li {
@@ -36,15 +37,7 @@ li a:hover {
     display: none;
 }
 .child-show{
-    /*display:block;
-    float: left; 
-    margin-left: -100%; 
-    z-index:2; 
-    position: relative;*/ 
     position:fixed;
-    /*top:0px;*/
-    /*left:0px;*/
-    /*width:100%;*/
 }
 .child-hide{
     position: absolute;
