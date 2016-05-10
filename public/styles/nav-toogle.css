@@ -236,9 +236,9 @@ section.text-content{
     -o-transition: .5s ease-in-out;
     transition: .5s ease-in-out;
     cursor: pointer;
-    top: 14px;
+    top: 20px;
     left : auto;
-    right: 14px;
+    right: 24px;
     -webkit-animation-name: open-in; /* Chrome, Safari, Opera */
     -webkit-animation-duration: 1s; /* Chrome, Safari, Opera */
     animation-name: open-in;
@@ -246,12 +246,12 @@ section.text-content{
 }
 @-webkit-keyframes open-in {
     0%      {right: 80%;}
-    100%    {right: 14px;}
+    100%    {right: 24px;}
 }
 /* Standard syntax */
 @keyframes open-in {
     0%      {right: 80%;}
-    100%    {right: 14px;}
+    100%    {right: 24px;}
 }
 
 #nav-icon span {
@@ -301,23 +301,23 @@ section.text-content{
     -moz-transform: rotate(45deg);
     -o-transform: rotate(45deg);
     transform: rotate(45deg);
-    width: 33px;
+    width: 24px;
     top: 0px;
     left: 0px;
 }
 
 #nav-icon.open span:nth-child(2) {
-  width: 0%;
-  opacity: 0;
+    width: 0%;
+    opacity: 0;
 }
 
 #nav-icon.open span:nth-child(3) {
-  -webkit-transform: rotate(-45deg);
-  -moz-transform: rotate(-45deg);
-  -o-transform: rotate(-45deg);
-  transform: rotate(-45deg);;
-    width: 33px;
-    top: 23px;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);;
+    width: 24px;
+    top: 17px;
     left: 0px;
 }
 
@@ -325,23 +325,11 @@ section.text-content{
 .logo{
     display: none;   
 }
+
 .banner-img{
     width: 100%;
     min-height: 240px;
     background: url("/images/background-image.jpg") 50% 50% / cover;
-}
-div.translucent-in{
-    top: 0px;
-    left: 100%;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    background: rgba(0, 0, 0, 0.5);
-    -webkit-animation-name: translucent-in; /* Chrome, Safari, Opera */
-    -webkit-animation-duration: 1s; /* Chrome, Safari, Opera */
-    animation-name: translucent-in;
-    animation-duration: 1s;
-    position: absolute;
 }
 
 li>ul {
@@ -354,7 +342,7 @@ li>ul {
     line-height: 48px;
 }
 
-li>a.parent-start::before,li>a.parent-out::before {
+li>a.parent-start::after,li>a.parent-out::after {
     content: "";
     display: block;
     width: 10px;
@@ -364,11 +352,11 @@ li>a.parent-start::before,li>a.parent-out::before {
     border-right: 3px solid rgb(236, 0, 140);
     transition: 0.25s;
     position: relative;
-    top: 28px;
+    top: -25px;
     left: 225px;
 }
 
-li>a.parent-in::before {
+li>a.parent-in::after {
     content: "";
     display: block;
     width: 10px;
@@ -378,15 +366,16 @@ li>a.parent-in::before {
     border-right: 3px solid rgb(236, 0, 140);
     transition: 0.25s;
     position: relative;
-    top: 28px;
+    top: -25px;
     left: 225px;
 }
 
 li a {
+    height: 48px;
     display: block;
     color: #000;
-    padding: 8px 0 8px 16px;
     text-decoration: none;
+    padding-left: 24px;
 }
 
 /* Change the link color on hover */
@@ -468,6 +457,7 @@ ul.child-hide{
     width: 280px;
     height: auto;
     background: #fff;
+    margin-top: 12px;
 }
 
 .top-bar{
@@ -475,6 +465,49 @@ ul.child-hide{
     width: 100%;
     height: 60px;
 }
+
+.container-start{
+    left: 0px;
+}
+
+.container-out{
+    left: 280px;
+    -webkit-animation-name: container-out; /* Chrome, Safari, Opera */
+    -webkit-animation-duration: 1s; /* Chrome, Safari, Opera */
+    animation-name: container-out;
+    animation-duration: 1s;
+}
+
+.container-in{
+    left: 0px;
+    -webkit-animation-name: container-in; /* Chrome, Safari, Opera */
+    -webkit-animation-duration: 1s; /* Chrome, Safari, Opera */
+    animation-name: container-in;
+    animation-duration: 1s;
+}
+
+@-webkit-keyframes container-out {
+    0%      {left:0px;}
+    100%    {left:280px;}
+}
+
+@keyframes container-out {
+    0%      {left:0px;}
+    100%    {left:280px;}
+}
+
+@-webkit-keyframes container-in {
+    0%      {left:280px;}
+    100%    {left:0px}
+}
+
+/* Standard syntax */
+@keyframes container-in {
+    0%      {left:280px;}
+    100%    {left:0px}
+}
+
+
 
 @-webkit-keyframes animation-in {
     0%      {left:-100%;}
@@ -496,20 +529,4 @@ ul.child-hide{
     0%      {left:0%;}
     100%    {left:-150%}
 }
-
-@-webkit-keyframes translucent-in {
-    0%      {background:rgba(0, 0, 0, 0.0);
-            left: 0%;}
-    100%    {background:rgba(0, 0, 0, 0.5);
-            left: 100%;}
-}
-
-/* Standard syntax */
-@keyframes translucent-in {
-    0%      {background:rgba(0, 0, 0, 0.0);
-            left: 0%;}
-    100%    {background:rgba(0, 0, 0, 0.5);
-            left: 100%;}
-}
-
 }
