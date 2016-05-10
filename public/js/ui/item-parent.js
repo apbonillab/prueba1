@@ -21,6 +21,10 @@ var itemParent = {
                 });
             }
         }
+        document.querySelector("#mask-container")
+            .addEventListener("click", function () {
+                itemParent.hideAll();
+            });
     },
     /**
      * animate, changes between classes and styles
@@ -31,10 +35,12 @@ var itemParent = {
             itemParent.hideAll();
             element.className = "parent-in";
             element.nextElementSibling.className = "child-show";
+            document.getElementById("mask-container").className = "mask";
         }
         function animateOut() {
             element.className = "parent-out";
             element.nextElementSibling.className = "child-hide";
+            document.getElementById("mask-container").className = "mask mask-mobile";
         }
         if (element.className === "parent-in")
             animateOut();

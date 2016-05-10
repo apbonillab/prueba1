@@ -4,6 +4,13 @@ document.querySelector("#nav-icon")
         this.classList.toggle("open");
         animate();
     });
+document.querySelector("#mask-container")
+    .addEventListener("click", function () {
+        document.querySelector("#nav-icon").classList.toggle("open");
+        animate();
+        document.getElementById("mask-container").className = "";
+    });
+
 /**
  * Animates the hamburger icon
  */
