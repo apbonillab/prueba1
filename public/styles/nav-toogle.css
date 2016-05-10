@@ -183,7 +183,7 @@ main{
         font-family: HUGEAvantGardeBold;
         font-size: 44px;
         line-height: 48px;
-        margin: 41px 24px;
+        margin: 50px 24px;
     }
     
     
@@ -207,8 +207,8 @@ section.text-content{
 }
 
 #nav-icon {
-  width: 60px;
-  height: 45px;
+  width: 24px;
+  height: 24px;
   position: absolute;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
@@ -219,13 +219,13 @@ section.text-content{
   -o-transition: .5s ease-in-out;
   transition: .5s ease-in-out;
   cursor: pointer;
-  top: 14px;
-  left : 14px;
+  top: 20px;
+  left : 24px;
 }
 
 #nav-icon.open {
-    width: 60px;
-    height: 45px;
+    width: 24px;
+    height: 24px;
     position: absolute;
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
@@ -257,7 +257,7 @@ section.text-content{
 #nav-icon span {
   display: block;
   position: absolute;
-  height: 9px;
+  height: 4px;
   width: 100%;
   background: #FFF;
   opacity: 1;
@@ -281,7 +281,7 @@ section.text-content{
 }
 
 #nav-icon span:nth-child(2) {
-  top: 18px;
+  top: 9px;
   -webkit-transform-origin: left center;
   -moz-transform-origin: left center;
   -o-transform-origin: left center;
@@ -289,7 +289,7 @@ section.text-content{
 }
 
 #nav-icon span:nth-child(3) {
-  top: 36px;
+  top: 18px;
   -webkit-transform-origin: left center;
   -moz-transform-origin: left center;
   -o-transform-origin: left center;
@@ -297,12 +297,13 @@ section.text-content{
 }
 
 #nav-icon.open span:nth-child(1) {
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
-  transform: rotate(45deg);
-  top: -3px;
-  left: 8px;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    width: 33px;
+    top: 0px;
+    left: 0px;
 }
 
 #nav-icon.open span:nth-child(2) {
@@ -314,9 +315,10 @@ section.text-content{
   -webkit-transform: rotate(-45deg);
   -moz-transform: rotate(-45deg);
   -o-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-  top: 39px;
-  left: 8px;
+  transform: rotate(-45deg);;
+    width: 33px;
+    top: 23px;
+    left: 0px;
 }
 
     
@@ -429,9 +431,9 @@ ul {
 
 .nav-logo-in{
     position: relative;
-    width: 80px;
-    padding-top: 25px;
-    padding-left: 15px;
+    width: 50px;
+    padding-top: 20px;
+    padding-left: 24px;
     -webkit-animation-name: animation-in; /* Chrome, Safari, Opera */
     -webkit-animation-duration: 1s; /* Chrome, Safari, Opera */
     animation-name: animation-in;
@@ -471,7 +473,7 @@ ul.child-hide{
 .top-bar{
     background: #ec008c;
     width: 100%;
-    height: 80px;
+    height: 60px;
 }
 
 @-webkit-keyframes animation-in {
