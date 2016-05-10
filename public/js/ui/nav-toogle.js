@@ -3,14 +3,7 @@ document.querySelector("#nav-icon")
         this.classList.toggle("open");
         animate();
     });
-document.querySelector("#navbar")
-    .addEventListener("click", function () {
-        animate();
-        document.querySelector("#nav-icon").classList.toggle("open");
-    });
 
-
-/**Animation translation logic*/
 function animate() {
     function animateIn() {
         document.getElementById("navbar").className = "animated-in";

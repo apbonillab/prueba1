@@ -1,4 +1,11 @@
+/**
+ * itemParent structure
+ * Behavor of item nav menu 
+ */
 var itemParent = {
+    /**
+     * init add click event to navegation items
+     */
     init: function () {
         var className = document.getElementsByClassName("parent-start");
         for (var i = 0; i < className.length; i++) {
@@ -15,6 +22,10 @@ var itemParent = {
             }
         }
     },
+    /**
+     * animate, changes between classes and styles
+     * @param {Element} pass the element to change classes to animate
+     */
     animate: function animate(element) {
         function animateIn() {
             itemParent.hideAll();
@@ -31,8 +42,10 @@ var itemParent = {
             animateIn();
         }
     },
+    /**
+     * 
+     */
     hideAll() {
-        //TODO solve this bug
         var n = 1;
         while (n > 0) {
             var className = document.getElementsByClassName("parent-in");
