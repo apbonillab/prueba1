@@ -1,9 +1,12 @@
+/**Set event click toogle to hamburguer icon*/
 document.querySelector("#nav-icon")
     .addEventListener("click", function () {
         this.classList.toggle("open");
         animate();
     });
-
+/**
+ * Animates the hamburger icon
+ */
 function animate() {
     function animateIn() {
         document.getElementById("navbar").className = "animated-in";
