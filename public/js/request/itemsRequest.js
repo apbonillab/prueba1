@@ -71,5 +71,5 @@ var ItemsRequest = {
     }
 }
 
-ItemsRequest.request();
+
 

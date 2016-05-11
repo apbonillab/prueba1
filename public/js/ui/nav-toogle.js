@@ -1,9 +1,10 @@
 /**
- * Set event click toogle to hamburguer icon
- * */
+ * navToogle sets events about navigation items
+ * 
+*/
 var navToogle = {
     /**
-     * 
+     *init set event click to interactive elements 
      */
     init: function () {
         document.querySelector("#nav-icon")
@@ -19,15 +20,21 @@ var navToogle = {
             });
     },
     /**
-    * Animates the hamburger icon
+    * animate set animaions classes about navToogle
     */
     animate: function () {
+        /**
+         * animateIn animations when navToogle in
+         */
         function animateIn() {
             document.getElementById("navbar").className = "animated-in";
             document.getElementById("logo-mobile").className = "nav-logo-in";
             document.getElementById("mask-container").className = "mask";
             document.getElementById("container").className = "container-out";
         }
+        /**
+         * animateIn animations when navToogle out
+         */
         function animateOut() {
             document.getElementById("navbar").className = "animated-out";
             document.getElementById("logo-mobile").className = "nav-logo-out";
@@ -35,6 +42,7 @@ var navToogle = {
             document.getElementById("container").className = "container-in";
             itemParent.hideAll();
         }
+
         if (document.getElementById("navbar").className === "animated-in")
             animateOut();
         else
